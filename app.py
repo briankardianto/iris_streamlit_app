@@ -10,11 +10,11 @@ scaler = joblib.load("artifacts/preprocessor.pkl")
 model = joblib.load("artifacts/model.pkl")
 
 def main():
-    st.title('Machine Learning Iris Prediction Model Deployment')
+    st.title('Machine Learning Iris Prediction')
 
     # Add user input components for 5 features
-    sepal_length = st.number_input('input nilai sepal_length', min_value=0.0, max_value=10.0, value=0.1)
-    sepal_width = st.number_input('sepal_width', min_value=0.0, max_value=10.0, value=0.1)
+    sepal_length = st.slider('input nilai sepal_length', min_value=0.0, max_value=10.0, value=0.1)
+    sepal_width = st.slider('sepal_width', min_value=0.0, max_value=10.0, value=0.1)
     patal_length = st.slider('patal_length', min_value=0.0, max_value=10.0, value=0.1)
     patal_width = st.slider('patal_width', min_value=0.0, max_value=10.0, value=0.1)
     
